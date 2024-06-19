@@ -1,0 +1,16 @@
+TASK1
+
+1. CREATE A DIRECTORY BY NAME "serverlogs" UNDER THE PATH "/user/ubh01/analydata" ON HDFS.
+NOTE: YOU NEED TO CREATE THE PATH IF THE PATH DOES NOT EXIST.
+
+2. ON UBUNTU MACHINE UNDER "/var/logs/" CAPTURE THE auth.log,kern.log,syslog FILES AND PUT THEM ON HDFS UNER "serverlogs".
+
+3. SET FULL PERMISSION ON serverlogs DIRECTORY.
+
+4. CHECK THE BLOCK INFORMATION FROM NAMENODE OF ALL THE FILES.
+
+
+TASK2
+SQOOP
+1. Import the table called "webpage" under "devsh_loudacre" database into hdfs.
+2. Now copy this directory to OS location from hdfs.

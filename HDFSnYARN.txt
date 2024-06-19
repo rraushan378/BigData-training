@@ -1,0 +1,65 @@
+HDFS COMMANDS
+
+From machine terminal:
+
+$ sudo jps
+
+$ hostname
+
+$ hadoop version
+
+**************************************
+Open Namenode WebUI
+
+Open firefox browser and provide: http://<hostname>:50070
+* Replace the hostname with actual hostname of the machine.
+
+
+Client commands
+$hdfs dfs (enter)
+
+Admin commands
+$hdfs dfsadmin
+
+HA commands
+$hdfs haadmin
+
+**************************************
+For particular command help:
+
+$hdfs dfs -help <any command name give>
+**************************************
+
+Ingesting a file into hadoop
+
+First let us create home location for the user
+
+$id
+
+$ sudo -u hdfs hdfs dfs -mkdir -p /user/<username>
+* replace the username with actual username
+
+$ sudo -u hdfs hdfs dfs -chown <username> /user/<username>
+
+STEP 1: Open vi editor from terminal by giving filename as hadooptest
+
+$ sudo vi hadooptest (enter)
+
+Press "ESC" key and press "INSERT" key on keyboard and type some data of your choice
+
+After typing Press "ESC" key and press colon (:) and type 'wq' to save and quit.
+
+STEP 2: 
+$hdfs dfs -mkdir /user/<username>/mydata
+$hdfs dfs -put hadooptest /user/<username>/mydata
+$hdfs dfs -ls /user/<username>/mydata
+$hdfs dfs -cat /user/<username>/mydata/hadooptest
+$hdfs dfs -rm /user/<username>/mydata/hadooptest
+
+* Replace username with actual username
+
+**************************************
+
+
+
+

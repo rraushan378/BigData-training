@@ -1,0 +1,16 @@
+
+
+TEXTFILE
+CSV
+PARQUET
+AVRO
+ORC FILE
+
+/user/root/ordersparquet/ordersinfo.parquet  (ordid,orname,dtoforder)
+
+CREATE TABLE orders(ordid int,ordname string, dtoforder timestamp)
+STORED AS PARQUET
+row format delimited
+fields terminated by ','
+location '/users/root/ordersparquet/'
+
